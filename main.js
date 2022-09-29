@@ -1,9 +1,13 @@
 
 const luckyBtn = document.querySelector('.lucky__btn');
+let currentLogo = document.querySelector('.logo__img');
+const newImgSrc = "img/logo_il-makiage.png";
+
 luckyBtn.addEventListener('click', changeLogo);
 
-function changeLogo() {
-    const currentLogo = document.querySelector('.logo__img');
-    currentLogo.classList.add('change__logo');
-    currentLogo.src = 'img/logo_il-makiage.png'
+function changeLogo(e) {
+    e.preventDefault();
+    currentLogo.src = newImgSrc;
+    currentLogo.classList.add('change__logo')
 }
+
